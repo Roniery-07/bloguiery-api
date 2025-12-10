@@ -5,21 +5,28 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch server.ts"
+    "dev": "tsx watch server.ts",
+    "migration:create": "npx tsx infra/scripts/create-migration.ts",
+    "migration:up": "npx tsx infra/scripts/apply-migrations.ts",
+    "migration:seed": "npx tsx infra/scripts/seed-database.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "pg": "^8.16.3",
-    "typescript": "^5.9.3"
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
-    "tsx": "^4.21.0"
+    "dotenv-cli": "^11.0.0",
+    "roniery-eslint-config": "^2.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
